@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lutong Pinoy Recipes 🇵🇭</title>
+  <meta name="description" content="Authentic Filipino recipes — from classic Adobo, Sinigang, Kare-Kare to everyday lutong bahay. Masarap, madaling lutuin, at pang-pamilya!" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="flag">🇵🇭</div>
+  <h1>Lutong Pinoy Recipes</h1>
+  <p>Authentic Filipino recipes — masarap, madaling lutuin, at pang-pamilya!</p>
+</header>
+
+<nav class="site-nav">
+  <a href="index.html" class="active">🏠 Home</a>
+  <a href="#main-dish">🍖 Main Dish</a>
+  <a href="#soup">🍲 Soups</a>
+  <a href="#noodles">🍜 Noodles</a>
+  <a href="#vegetable">🥬 Vegetables</a>
+  <a href="#seafood">🐟 Seafood</a>
+  <a href="#dessert">🍮 Desserts</a>
+</nav>
+
+<div class="container">
+  <h2 class="section-title"><span>🍽️</span> All Recipes</h2>
+
+  <div class="search-wrap">
+    <input type="text" id="searchInput" placeholder="Search recipes... (e.g. pork, soup, dessert)" oninput="filterRecipes()" />
+  </div>
+
+  <div class="filter-bar">
+    <button class="filter-btn active" onclick="setFilter('all', this)">All (28)</button>
+    <button class="filter-btn" onclick="setFilter('Main Dish', this)">🍖 Main Dish</button>
+    <button class="filter-btn" onclick="setFilter('Soup', this)">🍲 Soup</button>
+    <button class="filter-btn" onclick="setFilter('Noodles', this)">🍜 Noodles</button>
+    <button class="filter-btn" onclick="setFilter('Vegetable', this)">🥬 Vegetable</button>
+    <button class="filter-btn" onclick="setFilter('Seafood', this)">🐟 Seafood</button>
+    <button class="filter-btn" onclick="setFilter('Dessert', this)">🍮 Dessert</button>
+  </div>
+
+  <div class="recipe-grid" id="recipeGrid">
+
+    <div class="recipe-card" data-category="Main Dish" data-name="Chicken Adobo">
+      <img class="card-img" src="https://image.pollinations.ai/prompt/chicken%20adobo%20Filipino%20dish%20tender%20chicken%20dark%20soy%20vinegar%20sauce%20garlic%20bay%20leaves%20white%20bowl%20steam%20professional%20food%20photography?width=800&height=600&model=flux-realism&nologo=true&seed=101" alt="Chicken Adobo" loading="lazy" />
+      <div class="card-body">
+        <span class="card-category">Main Dish</span>
+        <div class="card-title">Chicken Adobo</div>
+        <div class="card-desc">The ultimate Filipino classic — chicken simmered in vinegar, soy sauce, garlic, and bay leaves until deeply savory and fall-off-the-bone tender.</div>
+        <div class="card-meta"><span>⏱ 15 min prep</span><span>🕐 45 min cook</span><span>⭐ Easy</span></div>
+        <a class="card-link" href="recipes/adobo.html">View Recipe →</a>
+      </div>
+    </div>
+
+    <div class="recipe-card" data-category="Soup" data-name="Sinigang na Baboy">
+      <img class="card-img" src="https://image.pollinations.ai/prompt/sinigang%20na%20baboy%20Filipino%20pork%20tamarind%20soup%20kangkong%20string%20beans%20taro%20clay%20pot%20steam%20appetizing%20food%20photography?width=800&height=600&model=flux-realism&nologo=true&seed=102" alt="Sinigang na Baboy" loading="lazy" />
+      <div class="card-body">
+        <span class="card-category">Soup</span>
+        <div class="card-title">Sinigang na Baboy</div>
+        <div class="card-desc">Tamarind-soured pork rib soup loaded with kangkong, sitaw, gabi, and radish — pure Filipino comfort in a bowl.</div>
+        <div class="card-meta"><span>⏱ 15 min prep</span><span>🕐 50 min cook</span><span>⭐ Easy</span></div>
+        <a class="card-link" href="recipes/pork-sinigang.html">View Recipe →</a>
+      </div>
+    </div>
+
+    <div class="recipe-card" data-category="Main Dish" data-name="Kare-Kare">
+      <img class="card-img" src="https://image.pollinations.ai/prompt/kare%20kare%20Filipino%20oxtail%20peanut%20stew%20golden%20thick%20sauce%20oxtail%20eggplant%20banana%20blossom%20shrimp%20paste%20side%20ceramic%20bowl%20food%20photography?width=800&height=600&model=flux-realism&nologo=true&seed=103" alt="Kare-Kare" loading="lazy" />
+      <div class="card-body">
+        <span class="card-category">Main Dish</span>
+        <div class="card-title">Kare-Kare</div>
+        <div class="card-desc">Rich oxtail and tripe stew in a golden peanut sauce, served with bagoong alamang — a festive Filipino treasure.</div>
+        <div class="card-meta"><span>⏱ 20 min prep</span><span>🕐 2 hr cook</span><span>⭐ Medium</span></div>
+        <a class="card-link" href="recipes/kare-kare.html">View Recipe →</a>
+      </div>
+    </div>
+
+    <div class="recipe-card" data-category="Main Dish" data-name="Lechon Kawali">
+      <img class="card-img" src="https://image.pollinations.ai/prompt/lechon%20kawali%20crispy%20Filipino%20pork%20belly%20golden%20brown%20crackling%20skin%20juicy%20sliced%20wooden%20board%20dipping%20sauce%20food%20photography?width=800&height=600&model=flux-realism&nologo=true&seed=104" alt="Lechon Kawali" loading="lazy" />
+      <div class="card-body">
+        <span class="card-category">Main Dish</span>
+        <div class="card-title">Lechon Kawali</div>
+        <div class="card-desc">Crispy deep-fried pork belly — boiled until tender then fried to crackling, golden perfection.</div>
+        <div class="card-meta"><span>⏱ 10 min prep</span><span>🕐 50 min cook</span><span>⭐ Medium</span></div>
+        <a class="card-link" href="recipes/lechon-kawali.html">View Recipe →</a>
+      </div>
+    </div>
+
+    <div class="recipe-card" data-category="Noodles" data-name="Pancit Canton">
+      <img class="card-img" src="https://image.pollinations.ai/prompt/pancit%20canton%20Filipino%20stir%20fried%20egg%20noodles%20shrimp%20pork%20vegetables%20calamansi%20green%20onion%20wok%20dish%20food%20photography?width=800&height=600&model=flux-realism&nologo=true&seed=105" alt="Pancit Canton" loading="lazy" />
+      <div class="card-body">
+        <span class="card-category">Noodles</span>
+        <div class="card-title">Pancit Canton</div>
+        <div class="card-desc">Stir-fried wheat noodles with pork, shrimp, and vegetables in a savory sauce — a Filipino birthday staple.</div>
+        <div class="card-meta"><span>⏱ 15 min prep</span><span>🕐 20 min cook</span><span>⭐ Easy</span></div>
+        <a class="card-link" href="recipes/pancit-canton.html">View Recipe →</a>
+      </div>
+    </div>
+
+    <div class="recipe-card" data-category="Soup" data-name="Tinolang Manok">
+      <img class="card-img" src="https://image.pollinations.ai/prompt/tinolang%20manok%20Filipino%20chicken%20ginger%20soup%20clear%20golden%20broth%20green%20papaya%20malunggay%20clay%20pot%20steam%20food%20photography?width=800&height=600&model=flux-realism&nologo=true&seed=106" alt="Tinolang Manok" loading="lazy" />
+      <div class="card-body">
+        <span class="card-category">Soup</span>
+        <div class="card-title">Tinolang Manok</div>
+        <div class="card-desc">Light, ginger-scented chicken soup with green papaya and malunggay leaves — the ultimate healing Filipino soup.</div>
+        <div class="card-meta"><span>⏱ 10 min prep</span><span>🕐 40 min cook</span><span>⭐ Easy</span></div>
+        <a class="card-link" href="recipes/tinola.html">View Recipe →</a>
+      </div>
+    </div>
+
+    <div class="recipe-card" data-category="Main Dish" data-name="Bistek Tagalog">
+      <img class="card-img" src="https://image.pollinations.ai/prompt/bistek%20tagalog%20Filipino%20beef%20steak%20thinly%20sliced%20soy%20calamansi%20sauce%20caramelized%20onion%20rings%20white%20plate%20food%20photography?width=800&height=600&model=flux-realism&nologo=true&seed=107" alt="Bistek Tagalog" loading="lazy" />
+      <div class="card-body">
+        <span class="card-category">Main Dish</span>
+        <div class="card-title">Bistek Tagalog</div>
+        <div class="card-desc">Thin beef slices braised in calamansi juice and soy sauce, topped with caramelized onion rings.</div>
+        <div class="card-meta"><span>⏱ 10 min prep</span><span>🕐 30 min cook</span><span>⭐ Easy</span></div>
+        <a class="card-link" href="recipes/bistek.html">View Recipe →</a>
+      </div>
+    </div>
+
+    <div class="recipe-card" data-category="Soup" data-name="Bulalo">
+      <img class="card-img" src="https://image.pollinations.ai/prompt/bulalo%20Filipino%20beef%20bone%20marrow%20soup%20large%20shank%20bone%20rich%20clear%20broth%20corn%20cabbage%20rustic%20bowl%20steam%20food%20photography?width=800&height=600&model=flux-realism&nologo=true&seed=108" alt="Bulalo" loading="lazy" />
+      <div class="card-body">
+        <span class="card-category">Soup</span>
+        <div class="card-title">Bulalo</div>
+        <div class="card-desc">Slow-cooked beef shank and marrow bone soup with corn and cabbage — a rich, collagen-loaded Batangas specialty.</div>
+        <div class="card-meta"><span>⏱ 15 min prep</span><span>🕐 2.5 hr cook</span><span>⭐ Medium</span></div>
+        <a class="card-link" href="recipes/bulalo.html">View Recipe →</a>
+      </div>
+    </div>
+
+    <div class="recipe-card" data-category="Vegetable" data-name="Pinakbet">
+      <img class="card-img" src="https://image.pollinations.ai/prompt/pinakbet%20Filipino%20Ilocano%20vegetable%20stew%20bitter%20melon%20eggplant%20squash%20okra%20string%20beans%20shrimp%20paste%20clay%20pot%20food%20photography?width=800&height=600&model=flux-realism&nologo=true&seed=109" alt="Pinakbet" loading="lazy" />
+      <div class="card-body">
+        <span class="card-category">Vegetable</span>
+        <div class="card-title">Pinakbet</div>
+        <div class="card-desc">Ilocano vegetable medley of bitter melon, squash, eggplant, and okra cooked with shrimp paste.</div>
+        <div class="card-meta"><span>⏱ 15 min prep</span><span>🕐 25 min cook</span><span>⭐ Easy</span></div>
+        <a class="card-link" href="recipes/pinakbet.html">View Recipe →</a>
+      </div>
+    </div>
+
+    <div class="recipe-card" data-category="Soup" data-name="Nilaga">
+      <img class="card-img" src="https://image.pollinations.ai/prompt/nilaga%20Filipino%20pork%20bone%20soup%20clear%20broth%20pork%20ribs%20potatoes%20cabbage%20green%20onions%20white%20bowl%20steam%20home%20cooking%20food%20photography?width=800&height=600&model=flux-realism&nologo=true&seed=110" alt="Nilaga" loading="lazy" />
+      <div class="card-body">
+        <span class="card-category">Soup</span>
+        <div class="card-title">Nilaga</div>
+        <div class="card-desc">Simple, clean pork and vegetable soup boiled with potatoes, cabbage, and peppercorns — the everyday Filipino soup.</div>
+        <div class="card-meta"><span>⏱ 10 min prep</span><span>🕐 50 min cook</span><span>⭐ Easy</span></div>
+        <a class="card-link" href="recipes/nilaga.html">View Recipe →</a>
+      </div>
+    </div>
+
+    <div class="recipe-card" data-category="Main Dish" data-name="Pork Menudo">
+      <img class="card-img" src="https://image.pollinations.ai/prompt/pork%20menudo%20Filipino%20tomato%20pork%20stew%20potatoes%20carrots%20liver%20hotdog%20bell%20pepper%20red%20sauce%20white%20bowl%20food%20photography?width=800&height=600&model=flux-realism&nologo=true&seed=111" alt="Pork Menudo" loading="lazy" />
+      <div class="card-body">
+        <span class="card-category">Main Dish</span>
+        <div class="card-title">Pork Menudo</div>
+        <div class="card-desc">Hearty tomato-based pork stew with potatoes, carrots, liver, and hotdog — a beloved fiesta and everyday ulam.</div>
+        <div class="card-meta"><span>⏱ 15 min prep</span><span>🕐 50 min cook</span><span>⭐ Easy</span></div>
+        <a class="card-link" href="recipes/menudo.html">View Recipe →</a>
+      </div>
+    </div>
+
+    <div class="recipe-card" data-category="Main Dish" data-name="Caldereta">
+      <img class="card-img" src="https://image.pollinations.ai/prompt/caldereta%20Filipino%20beef%20stew%20rich%20tomato%20sauce%20liver%20spread%20olives%20bell%20peppers%20potatoes%20carrots%20ceramic%20bowl%20food%20photography?width=800&height=600&model=flux-realism&nologo=true&seed=112" alt="Caldereta" loading="lazy" />
+      <div class="card-body">
+        <span class="card-category">Main Dish</span>
+        <div class="card-title">Caldereta</div>
+        <div class="card-desc">Rich beef or goat stew in tomato sauce with liver spread, olives, and bell peppers — bold and festive Filipino flavor.</div>
+        <div class="card-meta"><span>⏱ 15 min prep</span><span>🕐 60 min cook</span><span>⭐ Medium</span></div>
+        <a class="card-link" href="recipes/caldereta.html">View Recipe →</a>
+      </div>
+    </div>
+
+    <div class="recipe-card" data-category="Main Dish" data-name="Paksiw na Isda">
+      <img class="card-img" src="https://image.pollinations.ai/prompt/paksiw%20na%20isda%20Filipino%20fish%20simmered%20vinegar%20garlic%20ginger%20bangus%20milkfish%20eggplant%20savory%20broth%20clay%20pot%20food%20photography?width=800&height=600&model=flux-realism&nologo=true&seed=113" alt="Paksiw na Isda" loading="lazy" />
+      <div class="card-body">
+        <span class="card-category">Main Dish</span>
+        <div class="card-title">Paksiw na Isda</div>
+        <div class="card-desc">Fish simmered in vinegar, garlic, ginger, and peppercorns — simple, tangy, and the perfect everyday ulam.</div>
+        <div class="card-meta"><span>⏱ 10 min prep</span><span>🕐 20 min cook</span><span>⭐ Easy</span></div>
+        <a class="card-link" href="recipes/paksiw-na-isda.html">View Recipe →</a>
+      </div>
+    </div>
+
+    <div class="recipe-card" data-category="Vegetable" data-name="Ginataang Kalabasa">
+      <img class="card-img" src="https://image.pollinations.ai/prompt/ginataang%20kalabasa%20Filipino%20squash%20coconut%20milk%20string%20beans%20shrimp%20creamy%20orange%20stew%20white%20bowl%20food%20photography?width=800&height=600&model=flux-realism&nologo=true&seed=114" alt="Ginataang Kalabasa" loading="lazy" />
+      <div class="card-body">
+        <span class="card-category">Vegetable</span>
+        <div class="card-title">Ginataang Kalabasa</div>
+        <div class="card-desc">Squash and string beans slow-cooked in creamy coconut milk with shrimp and bagoong.</div>
+        <div class="card-meta"><span>⏱ 10 min prep</span><span>🕐 25 min cook</span><span>⭐ Easy</span></div>
+        <a class="card-link" href="recipes/ginataang-kalabasa.html">View Recipe →</a>
+      </div>
+    </div>
+
+    <div class="recipe-card" data-category="Soup" data-name="Arroz Caldo">
+      <img class="card-img" src="https://image.pollinations.ai/prompt/arroz%20caldo%20Filipino%20chicken%20rice%20porridge%20congee%20ginger%20crispy%20garlic%20topping%20soft%20boiled%20egg%20calamansi%20white%20bowl%20food%20photography?width=800&height=600&model=flux-realism&nologo=true&seed=115" alt="Arroz Caldo" loading="lazy" />
+      <div class="card-body">
+        <span class="card-category">Soup</span>
+        <div class="card-title">Arroz Caldo</div>
+        <div class="card-desc">Warm chicken and ginger rice porridge topped with crispy garlic and calamansi — the Filipino comfort food for rainy days.</div>
+        <div class="card-meta"><span>⏱ 10 min prep</span><span>🕐 45 min cook</span><span>⭐ Easy</span></div>
+        <a class="card-link" href="recipes/arroz-caldo.html">View Recipe →</a>
+      </div>
+    </div>
+
+    <div class="recipe-card" data-category="Noodles" data-name="Pancit Palabok">
+      <img class="card-img" src="https://image.pollinations.ai/prompt/pancit%20palabok%20Filipino%20noodles%20vibrant%20orange%20shrimp%20sauce%20topped%20hard%20boiled%20egg%20chicharon%20pork%20crackling%20tinapa%20spring%20onions%20food%20photography?width=800&height=600&model=flux-realism&nologo=true&seed=116" alt="Pancit Palabok" loading="lazy" />
+      <div class="card-body">
+        <span class="card-category">Noodles</span>
+        <div class="card-title">Pancit Palabok</div>
+        <div class="card-desc">Rice noodles smothered in vibrant orange shrimp sauce, loaded with chicharon, eggs, and tinapa.</div>
+        <div class="card-meta"><span>⏱ 20 min prep</span><span>🕐 30 min cook</span><span>⭐ Medium</span></div>
+        <a class="card-link" href="recipes/palabok.html">View Recipe →</a>
+      </div>
+    </div>
+
+    <div class="recipe-card" data-category="Main Dish" data-name="Dinuguan">
+      <img class="card-img" src="https://image.pollinations.ai/prompt/dinuguan%20Filipino%20pork%20blood%20stew%20dark%20savory%20thick%20sauce%20pork%20cubes%20green%20chili%20served%20with%20white%20puto%20rice%20cake%20food%20photography?width=800&height=600&model=flux-realism&nologo=true&seed=117" alt="Dinuguan" loading="lazy" />
+      <div class="card-body">
+        <span class="card-category">Main Dish</span>
+        <div class="card-title">Dinuguan</div>
+        <div class="card-desc">Savory pork blood stew — tangy, dark, and deeply flavored. Known abroad as "Chocolate Meat." Best with puto!</div>
+        <div class="card-meta"><span>⏱ 15 min prep</span><span>🕐 45 min cook</span><span>⭐ Medium</span></div>
+        <a class="card-link" href="recipes/dinuguan.html">View Recipe →</a>
+      </div>
+    </div>
+
+    <div class="recipe-card" data-category="Vegetable" data-name="Laing">
+      <img class="card-img" src="https://image.pollinations.ai/prompt/laing%20Bicol%20Filipino%20dried%20taro%20leaves%20creamy%20coconut%20milk%20chili%20shrimp%20paste%20dark%20green%20stew%20white%20rice%20side%20food%20photography?width=800&height=600&model=flux-realism&nologo=true&seed=118" alt="Laing" loading="lazy" />
+      <div class="card-body">
+        <span class="card-category">Vegetable</span>
+        <div class="card-title">Laing (Bicol)</div>
+        <div class="card-desc">Dried taro leaves slow-cooked in coconut milk with chili and bagoong — the spicy, creamy pride of Bicol.</div>
+        <div class="card-meta"><span>⏱ 10 min prep</span><span>🕐 45 min cook</span><span>⭐ Easy</span></div>
+        <a class="card-link" href="recipes/laing.html">View Recipe →</a>
+      </div>
+    </div>
+
+    <div class="recipe-card" data-category="Main Dish" data-name="Tortang Talong">
+      <img class="card-img" src="https://image.pollinations.ai/prompt/tortang%20talong%20Filipino%20eggplant%20omelette%20flame%20roasted%20golden%20fried%20egg%20coated%20eggplant%20white%20plate%20ketchup%20food%20photography?width=800&height=600&model=flux-realism&nologo=true&seed=119" alt="Tortang Talong" loading="lazy" />
+      <div class="card-body">
+        <span class="card-category">Main Dish</span>
+        <div class="card-title">Tortang Talong</div>
+        <div class="card-desc">Flame-roasted eggplant dipped in egg and pan-fried golden — smoky, simple, and irresistibly satisfying.</div>
+        <div class="card-meta"><span>⏱ 15 min prep</span><span>🕐 20 min cook</span><span>⭐ Easy</span></div>
+        <a class="card-link" href="recipes/tortang-talong.html">View Recipe →</a>
+      </div>
+    </div>
+
+    <div class="recipe-card" data-category="Dessert" data-name="Biko">
+      <img class="card-img" src="https://image.pollinations.ai/prompt/biko%20Filipino%20sticky%20rice%20cake%20kakanin%20glutinous%20rice%20coconut%20milk%20brown%20sugar%20golden%20caramel%20latik%20topping%20bilao%20food%20photography?width=800&height=600&model=flux-realism&nologo=true&seed=120" alt="Biko" loading="lazy" />
+      <div class="card-body">
+        <span class="card-category">Dessert</span>
+        <div class="card-title">Biko</div>
+        <div class="card-desc">Chewy glutinous rice cake cooked in coconut milk and brown sugar with golden caramel latik topping.</div>
+        <div class="card-meta"><span>⏱ 10 min prep</span><span>🕐 50 min cook</span><span>⭐ Easy</span></div>
+        <a class="card-link" href="recipes/biko.html">View Recipe →</a>
+      </div>
+    </div>
+
+    <div class="recipe-card" data-category="Main Dish" data-name="Pinoy Pork BBQ">
+      <img class="card-img" src="https://image.pollinations.ai/prompt/Filipino%20pork%20BBQ%20skewers%20charcoal%20grilled%20banana%20ketchup%20glaze%20caramelized%20charred%20meat%20on%20sticks%20street%20food%20white%20rice%20atchara%20food%20photography?width=800&height=600&model=flux-realism&nologo=true&seed=121" alt="Pinoy Pork BBQ" loading="lazy" />
+      <div class="card-body">
+        <span class="card-category">Main Dish</span>
+        <div class="card-title">Pinoy Pork BBQ</div>
+        <div class="card-desc">Sweet-salty marinated pork skewers grilled over charcoal with banana ketchup baste — the ultimate Filipino street food.</div>
+        <div class="card-meta"><span>⏱ 15 min prep</span><span>🕐 12 min grill</span><span>⭐ Easy</span></div>
+        <a class="card-link" href="recipes/pork-bbq.html">View Recipe →</a>
+      </div>
+    </div>
+
+    <div class="recipe-card" data-category="Seafood" data-name="Kinilaw na Tuna">
+      <img class="card-img" src="https://image.pollinations.ai/prompt/kinilaw%20na%20tuna%20Filipino%20ceviche%20fresh%20raw%20tuna%20cubes%20calamansi%20coconut%20vinegar%20red%20onion%20ginger%20bird%20eye%20chili%20white%20bowl%20food%20photography?width=800&height=600&model=flux-realism&nologo=true&seed=122" alt="Kinilaw na Tuna" loading="lazy" />
+      <div class="card-body">
+        <span class="card-category">Seafood</span>
+        <div class="card-title">Kinilaw na Tuna</div>
+        <div class="card-desc">Fresh tuna "cooked" in calamansi and coconut vinegar with ginger, red onion, and chili — Filipino ceviche.</div>
+        <div class="card-meta"><span>⏱ 15 min prep</span><span>🕐 No cook</span><span>⭐ Easy</span></div>
+        <a class="card-link" href="recipes/kinilaw-na-tuna.html">View Recipe →</a>
+      </div>
+    </div>
+
+    <div class="recipe-card" data-category="Soup" data-name="Monggo Guisado">
+      <img class="card-img" src="https://image.pollinations.ai/prompt/monggo%20guisado%20Filipino%20mung%20bean%20stew%20pork%20tomatoes%20malunggay%20moringa%20leaves%20green%20thick%20soup%20white%20rice%20food%20photography?width=800&height=600&model=flux-realism&nologo=true&seed=123" alt="Monggo Guisado" loading="lazy" />
+      <div class="card-body">
+        <span class="card-category">Soup</span>
+        <div class="card-title">Monggo Guisado</div>
+        <div class="card-desc">Hearty mung bean stew sautéed with pork, tomatoes, and malunggay — the classic Filipino Friday dish.</div>
+        <div class="card-meta"><span>⏱ 10 min prep</span><span>🕐 50 min cook</span><span>⭐ Easy</span></div>
+        <a class="card-link" href="recipes/monggo-guisado.html">View Recipe →</a>
+      </div>
+    </div>
+
+    <div class="recipe-card" data-category="Main Dish" data-name="Pork Sisig">
+      <img class="card-img" src="https://image.pollinations.ai/prompt/sizzling%20pork%20sisig%20Filipino%20chopped%20crispy%20pork%20belly%20cast%20iron%20plate%20egg%20on%20top%20calamansi%20chili%20steam%20sizzling%20restaurant%20food%20photography?width=800&height=600&model=flux-realism&nologo=true&seed=124" alt="Pork Sisig" loading="lazy" />
+      <div class="card-body">
+        <span class="card-category">Main Dish</span>
+        <div class="card-title">Pork Sisig</div>
+        <div class="card-desc">Sizzling chopped grilled pork belly with calamansi, chili, and egg on a hot cast-iron plate — king of pulutan.</div>
+        <div class="card-meta"><span>⏱ 20 min prep</span><span>🕐 40 min cook</span><span>⭐ Medium</span></div>
+        <a class="card-link" href="recipes/pork-sisig.html">View Recipe →</a>
+      </div>
+    </div>
+
+    <div class="recipe-card" data-category="Dessert" data-name="Ginataang Bilo-Bilo">
+      <img class="card-img" src="https://image.pollinations.ai/prompt/ginataang%20bilo%20bilo%20Filipino%20dessert%20chewy%20rice%20balls%20saba%20banana%20sweet%20potato%20taro%20sago%20tapioca%20creamy%20coconut%20milk%20white%20bowl%20food%20photography?width=800&height=600&model=flux-realism&nologo=true&seed=125" alt="Ginataang Bilo-Bilo" loading="lazy" />
+      <div class="card-body">
+        <span class="card-category">Dessert</span>
+        <div class="card-title">Ginataang Bilo-Bilo</div>
+        <div class="card-desc">Chewy rice balls with saba banana, sweet potato, and sago in sweet coconut milk — the ultimate rainy-day merienda.</div>
+        <div class="card-meta"><span>⏱ 20 min prep</span><span>🕐 30 min cook</span><span>⭐ Easy</span></div>
+        <a class="card-link" href="recipes/ginataang-bilo-bilo.html">View Recipe →</a>
+      </div>
+    </div>
+
+    <div class="recipe-card" data-category="Main Dish" data-name="Chicken Inasal">
+      <img class="card-img" src="https://image.pollinations.ai/prompt/chicken%20inasal%20Bacolod%20style%20grilled%20chicken%20orange%20red%20annatto%20color%20charcoal%20grill%20marks%20lemongrass%20garlic%20rice%20calamansi%20food%20photography?width=800&height=600&model=flux-realism&nologo=true&seed=126" alt="Chicken Inasal" loading="lazy" />
+      <div class="card-body">
+        <span class="card-category">Main Dish</span>
+        <div class="card-title">Chicken Inasal</div>
+        <div class="card-desc">Bacolod-style grilled chicken marinated in calamansi and lemongrass, basted with annatto oil for that iconic orange-red glow.</div>
+        <div class="card-meta"><span>⏱ 20 min prep</span><span>🕐 25 min grill</span><span>⭐ Medium</span></div>
+        <a class="card-link" href="recipes/chicken-inasal.html">View Recipe →</a>
+      </div>
+    </div>
+
+    <div class="recipe-card" data-category="Dessert" data-name="Leche Flan">
+      <img class="card-img" src="https://image.pollinations.ai/prompt/leche%20flan%20Filipino%20caramel%20custard%20silky%20smooth%20amber%20caramel%20sauce%20flowing%20over%20unmolded%20oval%20custard%20white%20plate%20elegant%20dessert%20food%20photography?width=800&height=600&model=flux-realism&nologo=true&seed=127" alt="Leche Flan" loading="lazy" />
+      <div class="card-body">
+        <span class="card-category">Dessert</span>
+        <div class="card-title">Leche Flan</div>
+        <div class="card-desc">Silky Filipino caramel custard made with egg yolks and condensed milk — the crown jewel of every fiesta dessert table.</div>
+        <div class="card-meta"><span>⏱ 20 min prep</span><span>🕐 35 min steam</span><span>⭐ Medium</span></div>
+        <a class="card-link" href="recipes/leche-flan.html">View Recipe →</a>
+      </div>
+    </div>
+
+  </div><!-- /recipe-grid -->
+</div><!-- /container -->
+
+<footer class="site-footer">
+  <p><strong>Lutong Pinoy Recipes 🇵🇭</strong> — Your daily source of authentic Filipino recipes</p>
+  <p style="margin-top:8px;">Follow us on <a href="https://www.facebook.com/profile.php?id=1162389303634284" target="_blank">Facebook</a> · Built with ❤️ by Federico Capilayo</p>
+  <p style="margin-top:6px;opacity:0.5;font-size:0.75rem;">Made with IBM Bob</p>
+</footer>
+
+<script>
+  let currentFilter = 'all';
+
+  function setFilter(cat, btn) {
+    currentFilter = cat;
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    applyFilters();
+  }
+
+  function filterRecipes() { applyFilters(); }
+
+  function applyFilters() {
+    const q = document.getElementById('searchInput').value.toLowerCase();
+    document.querySelectorAll('.recipe-card').forEach(card => {
+      const cat  = card.dataset.category || '';
+      const name = card.dataset.name || '';
+      const matchCat  = currentFilter === 'all' || cat === currentFilter;
+      const matchText = !q || name.toLowerCase().includes(q) || cat.toLowerCase().includes(q)
+                           || card.querySelector('.card-desc')?.textContent.toLowerCase().includes(q);
+      card.style.display = (matchCat && matchText) ? '' : 'none';
+    });
+  }
+</script>
+</body>
+</html>
